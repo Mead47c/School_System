@@ -41,3 +41,4 @@ build/
 # ملفات النظام
 .DS_Store
 Thumbs.db
+config.properties
