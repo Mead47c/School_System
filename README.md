@@ -58,7 +58,7 @@ It was developed as a personal project to enhance programming skills and impleme
 ## Screenshots
 
 ### Login Page  
-![Login](src/main/resources/images/Login)
+![Login]([src/main/resources/images/Login](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Login.png))
 
 ### Dashboard  
 ![Dashboard](src/main/resources/images/Dashboard)
