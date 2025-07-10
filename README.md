@@ -23,11 +23,34 @@ It was developed as a personal project to enhance programming skills and impleme
 
 ## Features
 
-- Live Search – Instantly filter student or teacher records as you type  
-- Student & Teacher Management – Easily manage entries with intuitive forms  
-- Database Integration – Data is stored and fetched via MySQL and JDBC  
-- Modern User Interface – Clean layout built with JavaFX and FXML  
-- Smooth Navigation – Fast response and seamless screen transitions
+- **Live Search** – Instantly filter student or teacher records as you type  
+- **Student & Teacher Management** – Easily manage entries with intuitive forms  
+- **Database Integration** – Data is stored and fetched via MySQL and JDBC  
+- **Modern User Interface** – Clean layout built with JavaFX and FXML  
+- **Smooth Navigation** – Fast response and seamless screen transitions
+
+### 🔽 Screenshots
+
+**Login Page**  
+![Login](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Login.png?raw=true)
+
+**Dashboard**  
+![Dashboard](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Dashboard.png?raw=true)
+
+**Students Table**  
+![Students](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Students.png?raw=true)
+
+**Teachers Table**  
+![Teachers](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Teachers.png?raw=true)
+
+**About Us Page**  
+![About Us](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/About%20Us.png?raw=true)
+
+**Signup Page**  
+![Signup](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Signup.png?raw=true)
+
+**Logout Page**  
+![Logout](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Logout.png?raw=true)
 
 ---
 
@@ -48,29 +71,3 @@ It was developed as a personal project to enhance programming skills and impleme
   - JavaFX (with FXML)  
   - JDBC and database integration
 - A basic login/logout system is included for secure access.
-- Future Enhancements may include:
-  - Multi-user account support  
-  - Role-based permissions (e.g., admin vs. staff)  
-  - Detailed reporting and export features
-
----
-
-## Screenshots
-
-### Login Page  
-![Login]([src/main/resources/images/Login](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Login.png))
-
-### Dashboard  
-![Dashboard](src/main/resources/images/Dashboard)
-
-### Students Table  
-![Students Table](src/main/resources/images/Students)
-
-### Teachers Table  
-![Teachers Table](src/main/resources/images/Teachers)
-
-### About Us Page  
-![About Us](src/main/resources/images/AboutUs)
-
-### Logout Page  
-![Logout](src/main/resources/images/Logout)
