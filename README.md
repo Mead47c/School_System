@@ -29,27 +29,29 @@ It was developed as a personal project to enhance programming skills and impleme
 - **Modern User Interface** – Clean layout built with JavaFX and FXML  
 - **Smooth Navigation** – Fast response and seamless screen transitions
 
-### 🔽 Screenshots
+---
 
-**Login Page**  
-![Login](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Login.png?raw=true)
+## Screenshots
 
-**Dashboard**  
-![Dashboard](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Dashboard.png?raw=true)
-
-**Students Table**  
-![Students](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Students.png?raw=true)
-
-**Teachers Table**  
-![Teachers](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Teachers.png?raw=true)
-
-**About Us Page**  
-![About Us](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/About%20Us.png?raw=true)
-
-**Signup Page**  
+**1. Signup Page**  
 ![Signup](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Signup.png?raw=true)
 
-**Logout Page**  
+**2. Login Page**  
+![Login](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Login.png?raw=true)
+
+**3. Dashboard**  
+![Dashboard](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Dashboard.png?raw=true)
+
+**4. Students Table**  
+![Students](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Students.png?raw=true)
+
+**5. Teachers Table**  
+![Teachers](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Teachers.png?raw=true)
+
+**6. About Us Page**  
+![About Us](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/About%20Us.png?raw=true)
+
+**7. Logout Page**  
 ![Logout](https://github.com/Mead47c/School_System/blob/main/src/main/resources/images/Logout.png?raw=true)
 
 ---
