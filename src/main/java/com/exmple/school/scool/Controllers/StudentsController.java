@@ -1,6 +1,8 @@
 package com.exmple.school.scool.Controllers;
 
 import com.exmple.school.scool.models.Student;
+import com.exmple.school.scool.database.DatabaseConnection; // ← إضافة الاستيراد الصحيح
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -27,17 +29,11 @@ public class StudentsController {
 
     @FXML private TextField searchField;
 
-    // Database connection parameters
-    private final String URL = "jdbc:mysql://localhost:4200/useres";
-    private final String USER = "root";
-    private final String PASS = "11223344Mm";
-
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
     private FilteredList<Student> filteredList;
 
     @FXML
     public void initialize() {
-        // Setup table columns with Student properties
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -46,15 +42,13 @@ public class StudentsController {
 
         loadStudents();
 
-        // Initialize filtered list and bind to TableView
         filteredList = new FilteredList<>(studentList, b -> true);
         studentsTable.setItems(filteredList);
 
-        // Add listener to filter table data based on search input (ID or Name)
         searchField.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredList.setPredicate(student -> {
                 if (newValue == null || newValue.isEmpty()) {
-                    return true; // Show all if search is empty
+                    return true;
                 }
 
                 String lowerCaseFilter = newValue.toLowerCase();
@@ -65,13 +59,12 @@ public class StudentsController {
         });
     }
 
-    // Load students data from database into observable list
     public void loadStudents() {
         studentList.clear();
 
         String query = "SELECT * FROM students";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASS);
+        try (Connection conn = DatabaseConnection.connect();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
 
@@ -91,11 +84,10 @@ public class StudentsController {
         }
     }
 
-    // Add a new student to database and update table view if successful
     public void addStudentToTable(Student student) {
         String insertQuery = "INSERT INTO students (id, name, email, phone, gender) VALUES (?, ?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASS);
+        try (Connection conn = DatabaseConnection.connect();
              PreparedStatement ps = conn.prepareStatement(insertQuery)) {
 
             ps.setString(1, student.getId());
@@ -113,7 +105,6 @@ public class StudentsController {
         }
     }
 
-    // Show Add Student dialog
     @FXML
     private void handleAddStudent() {
         try {
@@ -135,7 +126,6 @@ public class StudentsController {
         }
     }
 
-    // Delete selected student from database and update table view
     @FXML
     private void handleDeleteStudent() {
         Student selectedStudent = studentsTable.getSelectionModel().getSelectedItem();
@@ -153,11 +143,10 @@ public class StudentsController {
         }
     }
 
-    // Delete student record from database by ID
     private void deleteStudentFromDatabase(String id) {
         String deleteQuery = "DELETE FROM students WHERE id = ?";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASS);
+        try (Connection conn = DatabaseConnection.connect();
              PreparedStatement ps = conn.prepareStatement(deleteQuery)) {
 
             ps.setString(1, id);

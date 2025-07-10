@@ -1,22 +1,23 @@
 package com.exmple.school.scool.Controllers;
 
+import com.exmple.school.scool.database.DatabaseConnection;
 import com.exmple.school.scool.models.Teacher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.collections.transformation.SortedList;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.sql.*;
 import java.net.URL;
+import java.sql.*;
 
 public class TeachersController {
 
@@ -31,16 +32,10 @@ public class TeachersController {
     @FXML private Button addButton;
     @FXML private Button deleteButton;
 
-    // Database connection parameters
-    private final String URL = "jdbc:mysql://localhost:4200/useres";
-    private final String USER = "root";
-    private final String PASS = "11223344Mm";
-
     private ObservableList<Teacher> teacherList = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
-        // Initialize table columns with Teacher properties
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
@@ -49,35 +44,27 @@ public class TeachersController {
 
         loadTeachers();
 
-        // Setup filtered list for search functionality
         FilteredList<Teacher> filteredData = new FilteredList<>(teacherList, b -> true);
 
         searchField.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(teacher -> {
-                if (newValue == null || newValue.isEmpty()) {
-                    return true;
-                }
+                if (newValue == null || newValue.isEmpty()) return true;
                 String lowerCaseFilter = newValue.toLowerCase();
-
                 return String.valueOf(teacher.getId()).toLowerCase().contains(lowerCaseFilter) ||
                         teacher.getName().toLowerCase().contains(lowerCaseFilter);
             });
         });
 
-        // Bind sorted list to TableView to support sorting
         SortedList<Teacher> sortedData = new SortedList<>(filteredData);
         sortedData.comparatorProperty().bind(teachersTable.comparatorProperty());
-
         teachersTable.setItems(sortedData);
     }
 
-    // Load teachers data from database
     private void loadTeachers() {
         teacherList.clear();
-
         String query = "SELECT * FROM teachers";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASS);
+        try (Connection conn = DatabaseConnection.connect();
              PreparedStatement ps = conn.prepareStatement(query);
              ResultSet rs = ps.executeQuery()) {
 
@@ -96,13 +83,11 @@ public class TeachersController {
         }
     }
 
-    // Add teacher to table and database
     public void addTeacherToTable(Teacher teacher) {
         teacherList.add(teacher);
-
         String insertQuery = "INSERT INTO teachers (id, name, email, phone, gender) VALUES (?, ?, ?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASS);
+        try (Connection conn = DatabaseConnection.connect();
              PreparedStatement ps = conn.prepareStatement(insertQuery)) {
 
             ps.setInt(1, teacher.getId());
@@ -110,7 +95,6 @@ public class TeachersController {
             ps.setString(3, teacher.getEmail());
             ps.setString(4, teacher.getPhone());
             ps.setString(5, teacher.getGender());
-
             ps.executeUpdate();
 
         } catch (SQLException e) {
@@ -118,12 +102,10 @@ public class TeachersController {
         }
     }
 
-    // Open add teacher dialog
     @FXML
     private void handleAddTeacher() {
         try {
             URL fxmlUrl = getClass().getResource("/com/exmple/school/scool/views/add-teachers.fxml");
-
             if (fxmlUrl == null) {
                 System.err.println("Error: FXML file not found!");
                 return;
@@ -147,7 +129,6 @@ public class TeachersController {
         }
     }
 
-    // Delete selected teacher from database and list
     @FXML
     private void handleDeleteTeacher() {
         Teacher selectedTeacher = teachersTable.getSelectionModel().getSelectedItem();
@@ -165,11 +146,10 @@ public class TeachersController {
         }
     }
 
-    // Delete teacher from database by ID
     private void deleteTeacherFromDatabase(int id) {
         String deleteQuery = "DELETE FROM teachers WHERE id = ?";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASS);
+        try (Connection conn = DatabaseConnection.connect();
              PreparedStatement ps = conn.prepareStatement(deleteQuery)) {
 
             ps.setInt(1, id);
