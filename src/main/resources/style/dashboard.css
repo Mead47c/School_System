@@ -1,0 +1,100 @@
+
+.root {
+    -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.left > .vbox {
+    -fx-background-color: #1a2b49;
+    -fx-padding: 30 20 20 20;
+}
+
+.left > .vbox > Label {
+    -fx-text-fill: #e0aa3e;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 30 0;
+}
+
+
+.left > .vbox > Button {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-max-width: 200px;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+
+.left > .vbox > Button:hover {
+    -fx-background-color: #e0aa3e;
+    -fx-text-fill: #1a2b49;
+    -fx-font-weight: bold;
+}
+
+
+.center > .vbox {
+    -fx-background-color: #f6f5f3;
+    -fx-padding: 30;
+}
+
+
+.center > .vbox > Label {
+    -fx-text-fill: #1a2b49;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+}
+
+
+.hbox > .vbox {
+    -fx-background-color: #e0aa3e;
+    -fx-background-radius: 15;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8,0,0,2);
+}
+
+.hbox > .vbox > Label:first-child {
+    -fx-text-fill: #1a2b49;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+
+.hbox > .vbox > Label:last-child {
+    -fx-text-fill: #1a2b49;
+    -fx-font-size: 48;
+    -fx-font-weight: bold;
+}
+
+.center > .vbox > .vbox {
+    -fx-background-color: white;
+    -fx-padding: 20;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5,0,0,2);
+}
+
+
+.center > .vbox > .vbox > Label {
+    -fx-text-fill: #1a2b49;
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 15 0;
+}
+
+
+.table-view {
+    -fx-font-size: 14;
+}
+
+.table-column-header {
+    -fx-background-color: #e0aa3e;
+    -fx-text-fill: #1a2b49;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:filled:selected, .table-cell:selected {
+    -fx-background-color: #e0aa3e55;
+}

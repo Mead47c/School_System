@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="900" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exmple.school.scool.Controllers.DashboardController">
+
+    <!-- الشريط الجانبي -->
+    <left>
+        <VBox alignment="TOP_CENTER" prefWidth="200" spacing="20" style="-fx-background-color: #0f2d58;">
+            <padding>
+                <Insets bottom="20" left="10" right="10" top="40" />
+            </padding>
+
+
+            <ImageView fitHeight="100" fitWidth="100">
+                <image>
+                    <Image url="@../../../../../images/logo.png" />
+                </image>
+            </ImageView>
+
+            <Label style="-fx-text-fill: #f9c94c; -fx-font-size: 18px; -fx-font-weight: bold;" text="School System" />
+
+            <!-- الأزرار -->
+            <Button onAction="#handleDashboardButton" prefWidth="150" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="Dashboard" />
+            <Button onAction="#handleStudentsButton" prefWidth="150" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="Students" />
+            <Button onAction="#handleTeachersButton" prefWidth="150" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="Teachers" />
+            <Button onAction="#handleAboutUsButton" prefWidth="150" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" text="About Us" />
+            <Button onAction="#handleLogout" prefWidth="150" style="-fx-background-color: transparent; -fx-text-fill: #ff4c4c; -fx-font-size: 14px;" text="Logout" />
+        </VBox>
+    </left>
+
+
+    <center>
+        <StackPane fx:id="contentArea" style="-fx-background-color: white;">
+
+        </StackPane>
+    </center>
+
+</BorderPane>

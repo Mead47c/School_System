@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="15" style="-fx-padding: 30; -fx-background-color: #1a2b49;"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.exmple.school.scool.Controllers.AddTeacherController">
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #e0aa3e;"
+           text="Add New Teacher" />
+
+    <TextField fx:id="idField" promptText="ID"
+               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;
+                      -fx-background-color: #f0f0f0; -fx-border-color: #e0aa3e; -fx-text-fill: #1a2b49;" />
+
+    <TextField fx:id="nameField" promptText="Name"
+               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;
+                      -fx-background-color: #f0f0f0; -fx-border-color: #e0aa3e; -fx-text-fill: #1a2b49;" />
+
+    <TextField fx:id="emailField" promptText="Email"
+               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;
+                      -fx-background-color: #f0f0f0; -fx-border-color: #e0aa3e; -fx-text-fill: #1a2b49;" />
+
+    <TextField fx:id="phoneField" promptText="Phone"
+               style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 8;
+                      -fx-background-color: #f0f0f0; -fx-border-color: #e0aa3e; -fx-text-fill: #1a2b49;" />
+
+    <ComboBox fx:id="genderComboBox" promptText="Gender"
+              style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-padding: 6;
+                     -fx-border-color: #e0aa3e; -fx-text-fill: #1a2b49;" />
+
+    <HBox alignment="CENTER_RIGHT" spacing="15">
+        <Button onAction="#handleCancel"
+                style="-fx-background-color: transparent; -fx-text-fill: #e0aa3e;
+                       -fx-border-color: #e0aa3e; -fx-border-radius: 8;
+                       -fx-padding: 8 16; -fx-cursor: hand;" text="Cancel" />
+        <Button onAction="#handleAddTeacher"
+                style="-fx-background-color: #e0aa3e; -fx-text-fill: #1a2b49;
+                       -fx-background-radius: 8; -fx-padding: 8 16; -fx-cursor: hand;" text="Add" />
+    </HBox>
+
+</VBox>

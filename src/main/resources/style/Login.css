@@ -1,0 +1,61 @@
+
+.text-field, .password-field {
+    -fx-text-fill: #1a2b49;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-padding: 6 10 6 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 5, 0.0, 0, 2);
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #e0aa3e;
+    -fx-border-width: 2px;
+}
+
+.button {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0, 0, 2);
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 8, 0, 0, 3);
+}
+
+
+.label-titel {
+    fx-font-family: "Segoe UI", sans-serif;
+        -fx-font-size: 22px;
+        -fx-font-weight: bold;
+
+}
+
+
+.login-title {
+    -fx-font-size: 42px;
+    -fx-text-fill: #e0aa3e;
+    -fx-font-family: "Arial Black";
+}
+
+
+.font-icon {
+    -fx-icon-color: #e0aa3e;
+    -fx-icon-size: 30px;
+}
+
+
+.vbox-spacing {
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+}
+
+.hbox-center {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="260" prefWidth="420" style="-fx-background-color: #1a2b49;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.exmple.school.scool.Controllers.AboutUsController">
+
+    <top>
+        <HBox alignment="TOP_RIGHT">
+            <padding>
+                <Insets right="10" top="10" />
+            </padding>
+        </HBox>
+    </top>
+
+    <center>
+        <HBox alignment="CENTER_LEFT" spacing="15">
+            <padding>
+                <Insets bottom="10" left="25" right="25" top="10" />
+            </padding>
+
+            <VBox alignment="TOP_LEFT" spacing="6">
+                <Label style="-fx-text-fill: #e0aa3e; -fx-font-size: 20px; -fx-font-weight: bold;" text="School System" />
+                <Label style="-fx-text-fill: #cccccc; -fx-font-size: 12px;" text="# Build 2.00 - June 27, 2025" />
+                <Label style="-fx-text-fill: #cccccc; -fx-font-size: 12px;" text="Runtime Environment: JRE 23" />
+                <Label style="-fx-text-fill: #e0aa3e; -fx-font-size: 14px;" text="Developed by:" />
+                <Label style="-fx-text-fill: #e0e0e0; -fx-font-size: 12px;" text="Mead S. Al Ruwaili" />
+                <Label style="-fx-text-fill: #aaaaaa; -fx-font-size: 12px;" text="© 2025 School System" />
+            </VBox>
+
+        </HBox>
+    </center>
+</BorderPane>
