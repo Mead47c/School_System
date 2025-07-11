@@ -1,11 +1,11 @@
-/* dashboard.css */
+
 .root {
     -fx-background-color: #f6f5f3;
     -fx-padding: 30;
     -fx-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* عنوان الصفحة */
+
 .label#dashboardTitle {
     -fx-font-size: 28px;
     -fx-font-weight: bold;
@@ -13,13 +13,13 @@
     -fx-padding: 0 0 10 0; /* مسافة تحت العنوان */
 }
 
-/* الحاوية الخاصة بالصناديق (Students, Teachers, Grades) */
+
 .hbox.stats-container {
     -fx-spacing: 40;
     -fx-alignment: center;
 }
 
-/* صناديق الإحصائيات */
+
 .vbox.stats-box {
     -fx-background-color: #e0aa3e;
     -fx-background-radius: 15;
@@ -33,11 +33,11 @@
 }
 
 .vbox.stats-box:hover {
-    -fx-background-color: #d39c2f; /* درجة أغمق عند المرور */
+    -fx-background-color: #d39c2f;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12, 0, 0, 6);
 }
 
-/* عناوين كل صندوق */
+
 .label.stats-title {
     -fx-text-fill: #1a2b49;
     -fx-font-size: 20px;
@@ -45,14 +45,14 @@
     -fx-padding: 0 0 10 0;
 }
 
-/* أرقام الإحصائيات */
+
 .label.stats-number {
     -fx-text-fill: #1a2b49;
     -fx-font-size: 48px;
     -fx-font-weight: bold;
 }
 
-/* صندوق Grades Overview */
+
 .vbox.grades-overview {
     -fx-background-color: white;
     -fx-padding: 25;
@@ -61,7 +61,7 @@
     -fx-spacing: 15;
 }
 
-/* عنوان Grades Overview */
+
 .label#gradesOverviewTitle {
     -fx-text-fill: #1a2b49;
     -fx-font-size: 22px;
@@ -69,7 +69,7 @@
     -fx-padding: 0 0 10 0;
 }
 
-/* جدول الدرجات */
+
 .table-view {
     -fx-pref-height: 320;
     -fx-border-color: transparent;
@@ -78,26 +78,24 @@
     -fx-background-color: transparent;
 }
 
-/* رؤوس الأعمدة */
+
 .table-column-header {
     -fx-background-color: #e0aa3e;
     -fx-text-fill: #1a2b49;
     -fx-font-weight: bold;
     -fx-font-size: 14px;
-}
 
-/* صفوف الجدول */
 .table-row-cell {
     -fx-background-color: white;
 }
 
-/* عند المرور على صف */
+
 .table-row-cell:hover {
-    -fx-background-color: #f7f2d9; /* خلفية صفراء فاتحة */
+    -fx-background-color: #f7f2d9;
     -fx-cursor: hand;
 }
 
-/* تحسين نصوص الجدول */
+
 .table-cell {
     -fx-text-fill: #333333;
     -fx-font-size: 14px;
