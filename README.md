@@ -72,4 +72,3 @@ It was developed as a personal project to enhance programming skills and impleme
   - Java  
   - JavaFX (with FXML)  
   - JDBC and database integration
-- A basic login/logout system is included for secure access.
