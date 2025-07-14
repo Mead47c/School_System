@@ -72,3 +72,23 @@ It was developed as a personal project to enhance programming skills and impleme
   - Java  
   - JavaFX (with FXML)  
   - JDBC and database integration
+---
+
+## ⚠ Disclaimer
+
+This project is not plug-and-play.  
+To run it successfully, you must have:
+
+- A local MySQL database set up with the correct schema  
+- Proper configuration in the DBConnection.java file to match your environment
+
+This was intentionally done to respect security practices by not exposing real database credentials.  
+For demo purposes, screenshots and a recorded video have been shared on [LinkedIn](https://www.linkedin.com/posts/mead-al-ruwaili-946589333_java-javafx-mysql-activity-7349185415523745792-p2QK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFPptgYBrUl_SjIlJeGVFvs4Izu8-FluuSU) to showcase full functionality.  
+
+If you'd like to try running the system, feel free to contact me for assistance or sample SQL setup.
+
+---
+
+## Contact Me
+
+📧 Mead.alrwuili@outlook.com
