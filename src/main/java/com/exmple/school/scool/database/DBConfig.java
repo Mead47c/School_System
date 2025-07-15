@@ -12,7 +12,7 @@ public class DBConfig {
     static {
         try {
             Properties props = new Properties();
-            props.load(new FileInputStream("config.properties")); // تأكدي أن الملف موجود في نفس مجلد المشروع
+            props.load(new FileInputStream("config.properties")); 
             dbUrl = props.getProperty("db.url");
             dbUser = props.getProperty("db.username");
             dbPass = props.getProperty("db.password");
