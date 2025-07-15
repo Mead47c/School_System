@@ -30,6 +30,6 @@ public class DBConfig {
     }
 
     public static String getDbPass() {
-        return dbPass; // ← تم إصلاح المشكلة هنا
+        return dbPass; 
     }
 }
